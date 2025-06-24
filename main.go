@@ -33,6 +33,11 @@ func bookHandler(w http.ResponseWriter, r *http.Request) {
 		Author:  Author{Name: "Porcelain", Sex: "Girl"},
 		Generes: []Genere{{Name: "Tech"}},
 	}
+	book2 := Book{Name: "Star War",
+		Author:  Author{Name: "Porcelain", Sex: "Girl"},
+		Generes: []Genere{{Name: "Tech"}},
+	}
+	log.Printf("%v", book2)
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(book)
 }
